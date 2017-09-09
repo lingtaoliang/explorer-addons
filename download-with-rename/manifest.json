@@ -1,0 +1,33 @@
+{
+
+  "manifest_version": 2,
+  "name": "DownloadWithRename",
+  "version": "1.0",
+
+  "description": "Download an url and use pain text rename it. You can use ctrl + right-click to active it.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "permissions": [
+    "downloads",
+    "downloads.open",
+    "downloads.download",
+    "<all_urls>",
+    "notifications"
+  ],
+
+  "background": {
+    "scripts": ["background-script.js"]
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+
+}
